@@ -230,7 +230,7 @@
     function drawDoughnutText(animationDecimal, segmentTotal) {
       $summaryNumber
         .css({opacity: animationDecimal})
-        .text((segmentTotal * animationDecimal).toFixed(1));
+        .text((segmentTotal * animationDecimal).toFixed(0));
 	  var tmpNumber = settings.shortInt ? shortKInt(segmentTotal) : segmentTotal;
 	  $summaryNumber.html(tmpNumber).css('font-size', getScaleFontSize( $summaryNumber, tmpNumber));
     }
