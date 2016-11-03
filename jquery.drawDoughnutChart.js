@@ -231,6 +231,7 @@
       $summaryNumber
         .css({opacity: animationDecimal})
         .text((segmentTotal * animationDecimal).toFixed(0));
+      segmentTotal = ("" + segmentTotal).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	  var tmpNumber = settings.shortInt ? shortKInt(segmentTotal) : segmentTotal;
 	  $summaryNumber.html(tmpNumber).css('font-size', getScaleFontSize( $summaryNumber, tmpNumber));
     }
